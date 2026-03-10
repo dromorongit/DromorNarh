@@ -73,38 +73,48 @@ export const projects: Project[] = [
     client: 'Dhrone Tech Solutions'
   },
   {
-    slug: 'streamflix',
-    title: 'StreamFlix',
-    description: 'A streaming platform for movies and TV shows with user authentication, watchlist management, continue watching feature, search functionality, and responsive video player. Includes admin panel for content management.',
-    shortDescription: 'Video streaming platform with content management',
-    category: 'Web Application',
+    slug: 'nedhub-ghana',
+    title: 'Nedhub Ghana',
+    description: 'A comprehensive business website offering digital services including purchase of mobile data, airtime top-up, utility bill payments, and bulk SMS messaging platform. The platform provides a seamless and secure way for Ghanaians to manage their digital payments and communications.',
+    shortDescription: 'Digital services platform for data, airtime, utilities & bulk SMS',
+    category: 'Business Website',
     color: 'from-red-500 to-orange-500',
-    image: '/images/projects/streamflix.jpg',
-    technologies: ['Next.js', 'React', 'Node.js', 'MongoDB', 'Video.js', 'JWT'],
-    role: 'Full Stack Developer',
-    websiteUrl: '#',
+    image: '/images/projects/nedhub.jpg',
+    technologies: ['Next.js', 'React', 'Node.js', 'MongoDB', 'Payment Gateway', 'Tailwind CSS', 'Twilio', 'AWS'],
+    role: 'Full Stack Developer, UI/UX Designer, QA Tester & DevOps Engineer',
+    websiteUrl: 'https://www.nedhubgh.com',
     gallery: [
-      '/images/projects/streamflix-1.jpg'
+      '/images/nedhub1.png',
+      '/images/nedhub2.png',
+      '/images/nedhub3.png',
+      '/images/nedhub4.png',
+      '/images/nedhub5.png',
+      '/images/nedhub6.png',
+      '/images/nedhub7.png'
     ],
-    year: '2023',
-    client: 'Personal Project'
+    year: '2026',
+    client: 'Nedhub Ghana'
   },
   {
-    slug: 'healthconnect',
-    title: 'HealthConnect',
-    description: 'A healthcare management system connecting patients with healthcare providers. Features include appointment scheduling, telemedicine consultations, medical records management, and prescription tracking.',
-    shortDescription: 'Healthcare management and telemedicine platform',
+    slug: 'naaso-travels',
+    title: 'Naaso Travels & Tours',
+    description: 'A comprehensive Islamic pilgrimage and travel booking website for Hajj, Umrah, and general travel services. Users can apply for visas to various destinations worldwide including Makkah, Medina, China, and other countries. The platform features visa application tracking, travel package bookings, and comprehensive travel information.',
+    shortDescription: 'Islamic pilgrimage & Hajj, Umrah visa booking website',
     category: 'Web Application',
     color: 'from-green-500 to-teal-500',
-    image: '/images/projects/healthconnect.jpg',
-    technologies: ['Next.js', 'React', 'Node.js', 'PostgreSQL', 'WebRTC', 'Prisma'],
-    role: 'Backend Developer',
-    websiteUrl: '#',
+    image: '/images/projects/naaso.jpg',
+    technologies: ['Next.js', 'React', 'Node.js', 'PostgreSQL', 'Payment Gateway', 'Tailwind CSS', 'EmailJS'],
+    role: 'Full Stack Developer',
+    websiteUrl: 'https://www.naasotravels.com',
     gallery: [
-      '/images/projects/health-1.jpg'
+      '/images/naaso1.png',
+      '/images/naaso2.png',
+      '/images/naaso3.png',
+      '/images/naaso4.png',
+      '/images/naaso5.png'
     ],
-    year: '2024',
-    client: 'HealthConnect Inc.'
+    year: '2026',
+    client: 'Naaso Travels'
   },
   {
     slug: 'edusmart',
