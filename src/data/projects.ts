@@ -126,7 +126,7 @@ export const projects: Project[] = [
     image: '/images/projects/sweettreets.jpg',
     technologies: ['Next.js', 'React', 'Node.js', 'MongoDB', 'Stripe', 'Tailwind CSS', 'Redux', 'AWS S3'],
     role: 'Full Stack Developer',
-    websiteUrl: '#',
+    websiteUrl: 'https://www.sweettreets.shop',
     gallery: [
       '/images/sweettreets1.png',
       '/images/sweettreets2.png',
