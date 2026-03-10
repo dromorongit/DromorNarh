@@ -485,7 +485,14 @@ export default function Home() {
                       className="object-cover"
                       sizes="(max-width: 768px) 100vw, 33vw"
                     />
-                    <div className="absolute inset-0 bg-dark-900/60 group-hover:bg-dark-900/40 transition-colors" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/70 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-6">
+                      <h3 className="text-2xl font-bold mb-2 text-white">{project.name}</h3>
+                      <p className="text-gray-300">{project.category}</p>
+                    </div>
+                    <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                      <ExternalLink size={24} className="text-white" />
+                    </div>
                   </div>
                 ) : (
                   <>
