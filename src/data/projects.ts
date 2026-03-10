@@ -100,7 +100,7 @@ export const projects: Project[] = [
     title: 'Naaso Travels & Tours',
     description: 'A comprehensive Islamic pilgrimage and travel booking website for Hajj, Umrah, and general travel services. Users can apply for visas to various destinations worldwide including Makkah, Medina, China, and other countries. The platform features visa application tracking, travel package bookings, and comprehensive travel information.',
     shortDescription: 'Islamic pilgrimage & Hajj, Umrah visa booking website',
-    category: 'Web Application',
+    category: 'Service Website',
     color: 'from-green-500 to-teal-500',
     image: '/images/projects/naaso.jpg',
     technologies: ['Next.js', 'React', 'Node.js', 'PostgreSQL', 'Payment Gateway', 'Tailwind CSS', 'EmailJS'],
@@ -117,21 +117,24 @@ export const projects: Project[] = [
     client: 'Naaso Travels'
   },
   {
-    slug: 'edusmart',
-    title: 'EduSmart',
-    description: 'An online learning management system with course creation, video lessons, quizzes, progress tracking, certificates, and discussion forums. Includes instructor dashboard and student analytics.',
-    shortDescription: 'Comprehensive e-learning platform',
-    category: 'Web Application',
-    color: 'from-blue-500 to-indigo-500',
-    image: '/images/projects/edusmart.jpg',
-    technologies: ['Next.js', 'React', 'Node.js', 'MongoDB', 'AWS S3', 'Stripe'],
-    role: 'Lead Developer',
+    slug: 'sweettreets',
+    title: 'SweetTreets',
+    description: 'An e-commerce platform specializing in foreign snacks, drinks, and groceries from around the world. The platform features a wide selection of international products including Nutella, Maltesers, and other premium snacks. Users can browse products, add to cart, make secure payments, and track their orders.',
+    shortDescription: 'E-commerce platform for foreign snacks, drinks & groceries',
+    category: 'E-commerce Platform',
+    color: 'from-pink-500 to-rose-500',
+    image: '/images/projects/sweettreets.jpg',
+    technologies: ['Next.js', 'React', 'Node.js', 'MongoDB', 'Stripe', 'Tailwind CSS', 'Redux', 'AWS S3'],
+    role: 'Full Stack Developer',
     websiteUrl: '#',
     gallery: [
-      '/images/projects/edu-1.jpg'
+      '/images/sweettreets1.png',
+      '/images/sweettreets2.png',
+      '/images/sweettreets3.png',
+      '/images/sweettreets4.png'
     ],
-    year: '2023',
-    client: 'EduSmart Academy'
+    year: '2026',
+    client: 'Sweet Treets'
   }
 ]
 
