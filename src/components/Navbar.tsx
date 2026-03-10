@@ -44,7 +44,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center">
             <motion.div
               whileHover={{ scale: 1.1 }}
               className="relative"
@@ -52,13 +52,12 @@ export default function Navbar() {
               <Image
                 src="/images/logo.PNG"
                 alt="Narh H.P Dromor"
-                width={40}
-                height={40}
-                className="object-contain"
+                width={60}
+                height={60}
+                className="object-contain filter brightness-0 invert"
                 priority
               />
             </motion.div>
-            <span className="text-xl font-bold text-gradient hidden sm:block">Dromor</span>
           </Link>
 
           {/* Desktop Navigation */}

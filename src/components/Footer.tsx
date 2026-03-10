@@ -11,18 +11,17 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
-            <Link href="/" className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center">
               <div className="relative">
                 <div className="absolute inset-0 bg-seaBlue/30 blur-xl rounded-full" />
                 <Image
                   src="/images/logo.PNG"
                   alt="Narh H.P Dromor"
-                  width={40}
-                  height={40}
-                  className="object-contain relative z-10"
+                  width={60}
+                  height={60}
+                  className="object-contain relative z-10 filter brightness-0 invert"
                 />
               </div>
-              <span className="text-xl font-bold text-gradient">Dromor</span>
             </Link>
             <p className="mt-4 text-gray-400 max-w-md">
               Designing powerful software, modern digital platforms and cinematic visual experiences.
