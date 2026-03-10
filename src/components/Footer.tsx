@@ -17,8 +17,8 @@ export default function Footer() {
                 <Image
                   src="/images/logo.PNG"
                   alt="Narh H.P Dromor"
-                  width={60}
-                  height={60}
+                  width={120}
+                  height={120}
                   className="object-contain relative z-10 filter brightness-0 invert"
                 />
               </div>
