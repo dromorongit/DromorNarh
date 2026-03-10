@@ -1,6 +1,7 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion, useInView, useMotionValue, useSpring } from 'framer-motion'
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, Code, AppWindow, Video, Palette, Database, Server, Globe, Github, ExternalLink, Layers, Box, Cpu } from 'lucide-react'
@@ -65,6 +66,37 @@ const Particle = ({ delay, duration, size, x, y }: { delay: number, duration: nu
     }}
   />
 )
+
+// Counter component with animation
+const Counter = ({ value, suffix = "", duration = 2 }: { value: number, suffix?: string, duration?: number }) => {
+  const [count, setCount] = useState(0)
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
+
+  useEffect(() => {
+    if (isInView) {
+      let start = 0
+      const end = value
+      const incrementTime = (duration * 1000) / end
+      
+      const timer = setInterval(() => {
+        start += 1
+        setCount(start)
+        if (start >= end) {
+          clearInterval(timer)
+        }
+      }, incrementTime)
+
+      return () => clearInterval(timer)
+    }
+  }, [isInView, value, duration])
+
+  return (
+    <span ref={ref} className="tabular-nums">
+      {count}{suffix}
+    </span>
+  )
+}
 
 export default function Home() {
   return (
@@ -297,7 +329,7 @@ export default function Home() {
               <div className="w-16 h-16 bg-seaBlue/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-seaBlue/30 transition-colors">
                 <Github className="text-seaBlue" size={32} />
               </div>
-              <div className="text-3xl font-bold text-gradient mb-2">50+</div>
+              <div className="text-3xl font-bold text-gradient mb-2"><Counter value={50} suffix="+" /></div>
               <div className="text-gray-400 text-sm">Repositories</div>
               <div className="text-xs text-seaBlue mt-2">View GitHub Profile</div>
             </motion.div>
@@ -310,7 +342,7 @@ export default function Home() {
               <div className="w-16 h-16 bg-purple/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-purple/30 transition-colors">
                 <Globe className="text-purple" size={32} />
               </div>
-              <div className="text-3xl font-bold text-gradient mb-2">30+</div>
+              <div className="text-3xl font-bold text-gradient mb-2"><Counter value={30} suffix="+" /></div>
               <div className="text-gray-400 text-sm">Websites Built</div>
               <div className="text-xs text-purple mt-2">View Projects</div>
             </motion.div>
@@ -323,7 +355,7 @@ export default function Home() {
               <div className="w-16 h-16 bg-gold/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-gold/30 transition-colors">
                 <AppWindow className="text-gold" size={32} />
               </div>
-              <div className="text-3xl font-bold text-gradient mb-2">20+</div>
+              <div className="text-3xl font-bold text-gradient mb-2"><Counter value={20} suffix="+" /></div>
               <div className="text-gray-400 text-sm">Applications Created</div>
               <div className="text-xs text-gold mt-2">View Apps</div>
             </motion.div>
@@ -336,7 +368,7 @@ export default function Home() {
               <div className="w-16 h-16 bg-seaBlue/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-seaBlue/30 transition-colors">
                 <Server className="text-seaBlue" size={32} />
               </div>
-              <div className="text-3xl font-bold text-gradient mb-2">15+</div>
+              <div className="text-3xl font-bold text-gradient mb-2"><Counter value={15} suffix="+" /></div>
               <div className="text-gray-400 text-sm">APIs Developed</div>
               <div className="text-xs text-seaBlue mt-2">View Tech Stack</div>
             </motion.div>
@@ -481,10 +513,10 @@ export default function Home() {
             className="grid grid-cols-2 md:grid-cols-4 gap-8"
           >
             {[
-              { number: '50+', label: 'Projects Completed' },
-              { number: '30+', label: 'Happy Clients' },
-              { number: '5+', label: 'Years Experience' },
-              { number: '100%', label: 'Client Satisfaction' },
+              { number: 50, label: 'Projects Completed' },
+              { number: 30, label: 'Happy Clients' },
+              { number: 5, label: 'Years Experience' },
+              { number: 100, label: 'Client Satisfaction', suffix: '%' },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -494,7 +526,7 @@ export default function Home() {
                 transition={{ delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="text-4xl md:text-5xl font-bold text-gradient mb-2">{stat.number}</div>
+                <div className="text-4xl md:text-5xl font-bold text-gradient mb-2"><Counter value={stat.number} suffix={stat.suffix || "+"} /></div>
                 <div className="text-gray-400">{stat.label}</div>
               </motion.div>
             ))}
