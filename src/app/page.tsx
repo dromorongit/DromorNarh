@@ -466,9 +466,9 @@ export default function Home() {
             className="grid grid-cols-1 md:grid-cols-3 gap-6"
           >
             {[
-              { name: 'Netyark Mall', category: 'E-commerce Platform', color: 'from-seaBlue to-purple' },
-              { name: 'Rezar Aluminium', category: 'Business Website', color: 'from-purple to-gold' },
-              { name: 'Dhrone Tech POS', category: 'Desktop Application', color: 'from-gold to-seaBlue' },
+              { name: 'Netyark Mall', category: 'E-commerce Platform', color: 'from-seaBlue to-purple', image: '/images/Netyark.jfif' },
+              { name: 'Rezar Aluminium', category: 'Business Website', color: 'from-purple to-gold', image: '/images/rezarlogo.jpg' },
+              { name: 'Dhrone Tech POS', category: 'Desktop Application', color: 'from-gold to-seaBlue', image: null },
             ].map((project, index) => (
               <motion.div
                 key={project.name}
@@ -476,9 +476,24 @@ export default function Home() {
                 whileHover={{ scale: 1.03, y: -10 }}
                 className="group relative overflow-hidden rounded-xl cursor-pointer"
               >
-                <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-20 group-hover:opacity-40 transition-opacity`} />
-                <div className="absolute inset-0 bg-dark-900/80 group-hover:bg-dark-900/60 transition-colors" />
-                <div className="relative p-6 h-72 flex flex-col justify-end">
+                {project.image ? (
+                  <div className="relative h-72">
+                    <Image
+                      src={project.image}
+                      alt={project.name}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                    <div className="absolute inset-0 bg-dark-900/60 group-hover:bg-dark-900/40 transition-colors" />
+                  </div>
+                ) : (
+                  <>
+                    <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-20 group-hover:opacity-40 transition-opacity`} />
+                    <div className="absolute inset-0 bg-dark-900/80 group-hover:bg-dark-900/60 transition-colors" />
+                  </>
+                )}
+                <div className="absolute p-6 h-72 flex flex-col justify-end">
                   <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
                     <ExternalLink size={24} className="text-white" />
                   </div>
