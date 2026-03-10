@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Image from 'next/image'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
@@ -16,6 +17,10 @@ export const metadata: Metadata = {
     title: 'Narh H.P Dromor | Software Engineer & Creative Technologist',
     description: 'Designing powerful software, modern digital platforms and cinematic visual experiences.',
     type: 'website',
+  },
+  icons: {
+    icon: '/images/logo.PNG',
+    apple: '/images/logo.PNG',
   },
 }
 

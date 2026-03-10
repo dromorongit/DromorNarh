@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { Mail, Phone, MapPin, Send, MessageSquare, Clock, CheckCircle } from 'lucide-react'
 
 export default function ContactPage() {
@@ -69,12 +70,51 @@ export default function ContactPage() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
+        <div className="grid lg:grid-cols-12 gap-12">
+          {/* Left: Portrait Image */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="glass rounded-2xl p-8"
+            className="lg:col-span-4 hidden lg:block"
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="relative"
+            >
+              {/* Background glow */}
+              <div className="absolute inset-0 bg-gradient-to-br from-seaBlue/30 via-purple/20 to-gold/20 blur-3xl rounded-full" />
+              
+              {/* Main image */}
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                className="relative aspect-[3/4] rounded-2xl overflow-hidden"
+              >
+                <Image
+                  src="/images/photo_2026-03-09_18-25-00.jpg"
+                  alt="Narh H.P Dromor - Let's Work Together"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                />
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-dark-900/30" />
+                
+                {/* Text overlay */}
+                <div className="absolute bottom-6 left-6 right-6">
+                  <h3 className="text-xl font-bold text-white mb-1">Let's Work Together</h3>
+                  <p className="text-gray-300 text-sm">I'm always excited to discuss new projects and opportunities.</p>
+                </div>
+              </motion.div>
+            </motion.div>
+          </motion.div>
+
+          {/* Center: Contact Form */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="lg:col-span-4 glass rounded-2xl p-8"
           >
             <h2 className="text-2xl font-bold mb-6 flex items-center">
               <MessageSquare className="text-seaBlue mr-3" size={24} />
@@ -171,7 +211,7 @@ export default function ContactPage() {
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="space-y-6"
+            className="lg:col-span-4 space-y-6"
           >
             {contactInfo.map((info, index) => (
               <motion.div

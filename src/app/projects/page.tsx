@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ExternalLink, ArrowRight, Globe, ShoppingCart, Building, Briefcase, AppWindow, Video } from 'lucide-react'
 import { projects } from '@/data/projects'
 
@@ -30,7 +31,39 @@ const getCategoryIcon = (category: string) => {
 export default function ProjectsPage() {
   return (
     <div className="min-h-screen pt-24 pb-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Decorative background image */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.1 }}
+          transition={{ duration: 1.5 }}
+          className="absolute -right-32 -top-32 w-96 h-96"
+        >
+          <Image
+            src="/images/photo_2026-03-09_18-25-01.jpg"
+            alt=""
+            fill
+            className="object-cover rounded-full blur-3xl"
+            sizes="400px"
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.08 }}
+          transition={{ duration: 1.5, delay: 0.3 }}
+          className="absolute -left-32 bottom-32 w-80 h-80"
+        >
+          <Image
+            src="/images/photo_2026-03-09_18-24-59.jpg"
+            alt=""
+            fill
+            className="object-cover rounded-full blur-3xl"
+            sizes="400px"
+          />
+        </motion.div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Facebook, Instagram, Github, Mail, Phone, MapPin } from 'lucide-react'
 
 export default function Footer() {
@@ -11,8 +12,15 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-seaBlue to-purple flex items-center justify-center">
-                <span className="text-white font-bold text-lg">N</span>
+              <div className="relative">
+                <div className="absolute inset-0 bg-seaBlue/30 blur-xl rounded-full" />
+                <Image
+                  src="/images/logo.PNG"
+                  alt="Narh H.P Dromor"
+                  width={40}
+                  height={40}
+                  className="object-contain relative z-10"
+                />
               </div>
               <span className="text-xl font-bold text-gradient">Dromor</span>
             </Link>

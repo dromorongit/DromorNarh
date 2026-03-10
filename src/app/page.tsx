@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight, Code, AppWindow, Video, Palette, Database, Server, Globe, Github, ExternalLink, Layers, Box, Cpu } from 'lucide-react'
 
 const container = {
@@ -126,79 +127,128 @@ export default function Home() {
         {/* Grid overlay */}
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0wIDBoNDB2NDBIMHoiLz48cGF0aCBkPSJNMCAwaDFWNDBIMHoiIGZpbGw9IiMyMTIxMzEiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PHBhdGggZD0iTTAgMGg0MHYxSDB6IiBmaWxsPSIjMjEyMTMxIiBmaWxsLW9wYWNpdHk9IjAuMSIvPjwvZz48L3N2Zz4=')] opacity-20" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-          >
-            {/* Greeting */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-seaBlue font-medium mb-4 tracking-widest uppercase text-sm"
-            >
-              Welcome to My Portfolio
-            </motion.p>
-
-            {/* Name with gradient */}
-            <h1 className="text-5xl md:text-8xl font-bold mb-6">
-              <AnimatedText text="Narh H.P Dromor" className="text-gradient" delay={0.3} />
-            </h1>
-
-            {/* Role with typewriter effect */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center pt-20">
+            {/* Left: Text Content */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 1.2, duration: 0.6 }}
-              className="text-xl md:text-2xl text-gray-300 mb-4"
+              transition={{ duration: 1 }}
             >
-              <span className="text-gradient">Software Engineer</span> • 
-              <span className="text-purple"> App Developer</span> • 
-              <span className="text-seaBlue"> Creative Director</span>
+              {/* Greeting */}
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.6 }}
+                className="text-seaBlue font-medium mb-4 tracking-widest uppercase text-sm"
+              >
+                Welcome to My Portfolio
+              </motion.p>
+
+              {/* Name with gradient */}
+              <h1 className="text-5xl md:text-8xl font-bold mb-6">
+                <AnimatedText text="Narh H.P Dromor" className="text-gradient" delay={0.3} />
+              </h1>
+
+              {/* Role with typewriter effect */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.2, duration: 0.6 }}
+                className="text-xl md:text-2xl text-gray-300 mb-4"
+              >
+                <span className="text-gradient">Software Engineer</span> • 
+                <span className="text-purple"> App Developer</span> • 
+                <span className="text-seaBlue"> Creative Director</span>
+              </motion.div>
+
+              {/* Description */}
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.8, duration: 0.6 }}
+                className="text-lg text-gray-400 max-w-3xl mb-10 leading-relaxed"
+              >
+                I design and build <span className="text-seaBlue">powerful software systems</span>, 
+                modern <span className="text-purple">digital platforms</span>, and 
+                <span className="text-gold"> cinematic visual experiences</span> that inspire and transform businesses.
+              </motion.p>
+
+              {/* CTA Buttons */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 2.2, duration: 0.6 }}
+                className="flex flex-wrap gap-4"
+              >
+                <Link href="/projects">
+                  <motion.button
+                    whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(15, 110, 140, 0.5)' }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-8 py-4 bg-seaBlue text-white rounded-xl font-semibold hover:bg-seaBlue/90 transition-all flex items-center space-x-2 group"
+                  >
+                    <span>View Projects</span>
+                    <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                  </motion.button>
+                </Link>
+                <Link href="/contact">
+                  <motion.button
+                    whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(139, 92, 246, 0.3)' }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-8 py-4 glass text-white rounded-xl font-semibold hover:bg-white/10 transition-all"
+                  >
+                    Hire Me
+                  </motion.button>
+                </Link>
+              </motion.div>
             </motion.div>
 
-            {/* Description */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.8, duration: 0.6 }}
-              className="text-lg text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed"
-            >
-              I design and build <span className="text-seaBlue">powerful software systems</span>, 
-              modern <span className="text-purple">digital platforms</span>, and 
-              <span className="text-gold"> cinematic visual experiences</span> that inspire and transform businesses.
-            </motion.p>
-
-            {/* CTA Buttons */}
+            {/* Right: Portrait Image */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 2.2, duration: 0.6 }}
-              className="flex flex-wrap justify-center gap-4"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 1, duration: 0.8 }}
+              className="relative hidden lg:block"
             >
-              <Link href="/projects">
-                <motion.button
-                  whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(15, 110, 140, 0.5)' }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-seaBlue text-white rounded-xl font-semibold hover:bg-seaBlue/90 transition-all flex items-center space-x-2 group"
-                >
-                  <span>View Projects</span>
-                  <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-                </motion.button>
-              </Link>
-              <Link href="/contact">
-                <motion.button
-                  whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(139, 92, 246, 0.3)' }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 glass text-white rounded-xl font-semibold hover:bg-white/10 transition-all"
-                >
-                  Hire Me
-                </motion.button>
-              </Link>
+              {/* Gradient glow behind image */}
+              <motion.div
+                animate={{ 
+                  y: [0, -20, 0],
+                  scale: [1, 1.05, 1]
+                }}
+                transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
+                className="absolute inset-0 bg-gradient-to-br from-seaBlue/40 via-purple/30 to-gold/20 blur-3xl rounded-full"
+              />
+              
+              {/* Image container with floating animation */}
+              <motion.div
+                animate={{ 
+                  y: [0, -15, 0],
+                  rotate: [0, 1, 0, -1, 0]
+                }}
+                transition={{ 
+                  y: { duration: 4, repeat: Infinity, ease: 'easeInOut' },
+                  rotate: { duration: 8, repeat: Infinity, ease: 'easeInOut' }
+                }}
+                className="relative"
+              >
+                <div className="relative w-80 h-96 md:w-96 md:h-[500px] mx-auto">
+                  <Image
+                    src="/images/photo_2026-03-09_18-25-02.jpg"
+                    alt="Narh H.P Dromor"
+                    fill
+                    className="object-cover rounded-2xl shadow-2xl"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    priority
+                  />
+                  {/* Subtle border */}
+                  <div className="absolute inset-0 rounded-2xl border border-white/10" />
+                  {/* Top highlight */}
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-white/10 to-transparent" />
+                </div>
+              </motion.div>
             </motion.div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Scroll Indicator with enhanced animation */}

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Home, User, Folder, AppWindow, Video, Wrench, Layers, FlaskConical, BookOpen, Mail } from 'lucide-react'
@@ -46,11 +47,18 @@ export default function Navbar() {
           <Link href="/" className="flex items-center space-x-2">
             <motion.div
               whileHover={{ scale: 1.1 }}
-              className="w-10 h-10 rounded-lg bg-gradient-to-br from-seaBlue to-purple flex items-center justify-center"
+              className="relative"
             >
-              <span className="text-white font-bold text-lg">N</span>
+              <Image
+                src="/images/logo.PNG"
+                alt="Narh H.P Dromor"
+                width={40}
+                height={40}
+                className="object-contain"
+                priority
+              />
             </motion.div>
-            <span className="text-xl font-bold text-gradient">Dromor</span>
+            <span className="text-xl font-bold text-gradient hidden sm:block">Dromor</span>
           </Link>
 
           {/* Desktop Navigation */}
