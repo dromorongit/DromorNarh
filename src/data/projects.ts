@@ -25,14 +25,14 @@ export const projects: Project[] = [
     image: '/images/projects/netyark-mall.jpg',
     technologies: ['Next.js', 'React', 'Node.js', 'MongoDB', 'Stripe', 'Tailwind CSS', 'Redux', 'AWS S3'],
     role: 'Lead Developer - Full Stack Development',
-    websiteUrl: 'https://netyark.com',
+    websiteUrl: 'https://www.netyarkmall.com',
     gallery: [
-      '/images/projects/netyark-1.jpg',
-      '/images/projects/netyark-2.jpg',
-      '/images/projects/netyark-3.jpg'
+      '/images/netyarkmall1.png',
+      '/images/netyarkmall2.png',
+      '/images/netyarkmall3.png'
     ],
-    year: '2024',
-    client: 'Netyark Technologies'
+    year: '2026',
+    client: 'Netyark Mall'
   },
   {
     slug: 'rezar-aluminium',
@@ -43,13 +43,15 @@ export const projects: Project[] = [
     color: 'from-purple to-gold',
     image: '/images/projects/rezar.jpg',
     technologies: ['Next.js', 'React', 'Tailwind CSS', 'Framer Motion', 'EmailJS'],
-    role: 'Frontend Developer & UI/UX Designer',
-    websiteUrl: 'https://rezaraluminium.com',
+    role: 'Full Stack Developer',
+    websiteUrl: 'https://www.rezaraluminium.online',
     gallery: [
-      '/images/projects/rezar-1.jpg',
-      '/images/projects/rezar-2.jpg'
+      '/images/rezar1.png',
+      '/images/rezar2.png',
+      '/images/rezar3.png',
+      '/images/rezar4.png'
     ],
-    year: '2023',
+    year: '2025',
     client: 'Rezar Aluminium Company'
   },
   {

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useParams } from 'next/navigation'
 import { ArrowLeft, ExternalLink, Github, Calendar, User, Layers, ChevronRight } from 'lucide-react'
 import { projects, getProjectBySlug } from '@/data/projects'
@@ -145,10 +146,13 @@ export default function ProjectDetail() {
                         index === 0 ? 'md:col-span-2' : ''
                       }`}
                     >
-                      <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-30`} />
-                      <div className="absolute inset-0 flex items-center justify-center text-gray-500">
-                        <Layers size={48} className="opacity-50" />
-                      </div>
+                      <Image
+                        src={image}
+                        alt={`${project.title} - Image ${index + 1}`}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
                     </motion.div>
                   ))}
                 </div>
