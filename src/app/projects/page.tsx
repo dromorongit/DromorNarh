@@ -45,6 +45,7 @@ export default function ProjectsPage() {
             fill
             className="object-cover rounded-full blur-3xl"
             sizes="400px"
+            loading="lazy"
           />
         </motion.div>
         <motion.div
@@ -59,6 +60,7 @@ export default function ProjectsPage() {
             fill
             className="object-cover rounded-full blur-3xl"
             sizes="400px"
+            loading="lazy"
           />
         </motion.div>
       </div>

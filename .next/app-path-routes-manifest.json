@@ -1,0 +1,14 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/about/page": "/about",
+  "/apps/page": "/apps",
+  "/blog/page": "/blog",
+  "/contact/page": "/contact",
+  "/labs/page": "/labs",
+  "/page": "/",
+  "/projects/[slug]/page": "/projects/[slug]",
+  "/projects/page": "/projects",
+  "/services/page": "/services",
+  "/tech-stack/page": "/tech-stack",
+  "/videos/page": "/videos"
+}

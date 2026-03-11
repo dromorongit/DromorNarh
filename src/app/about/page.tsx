@@ -107,7 +107,9 @@ export default function AboutPage() {
                     alt="Narh H.P Dromor - Software Engineer"
                     fill
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
+                    priority
+                    quality={85}
                   />
                   {/* Overlay gradient */}
                   <div className="absolute inset-0 bg-gradient-to-t from-dark-900/50 to-transparent" />
@@ -126,7 +128,8 @@ export default function AboutPage() {
                     alt="Narh H.P Dromor - Creative Work"
                     fill
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 25vw"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 25vw, 20vw"
+                    loading="lazy"
                   />
                 </motion.div>
               </motion.div>

@@ -96,7 +96,9 @@ export default function ContactPage() {
                   alt="Narh H.P Dromor - Let's Work Together"
                   fill
                   className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 33vw"
+                  sizes="(max-width: 1024px) 100vw, (max-width: 1200px) 33vw, 25vw"
+                  priority
+                  quality={85}
                 />
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-dark-900/30" />

@@ -235,12 +235,12 @@ export default function Home() {
               </motion.div>
             </motion.div>
 
-            {/* Right: Portrait Image */}
+            {/* Right: Portrait Image - Visible on all screen sizes */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1, duration: 0.8 }}
-              className="relative hidden lg:block"
+              className="relative w-full max-w-md mx-auto lg:max-w-none"
             >
               {/* Gradient glow behind image */}
               <motion.div
@@ -264,14 +264,15 @@ export default function Home() {
                 }}
                 className="relative"
               >
-                <div className="relative w-80 h-96 md:w-96 md:h-[500px] mx-auto">
+                <div className="relative w-full aspect-[4/5] max-h-[500px] mx-auto">
                   <Image
                     src="/images/photo_2026-03-09_18-25-02.jpg"
                     alt="Narh H.P Dromor"
                     fill
                     className="object-cover rounded-2xl shadow-2xl"
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
                     priority
+                    quality={85}
                   />
                   {/* Subtle border */}
                   <div className="absolute inset-0 rounded-2xl border border-white/10" />
@@ -483,7 +484,10 @@ export default function Home() {
                       alt={project.name}
                       fill
                       className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 33vw"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      loading="lazy"
+                      placeholder="blur"
+                      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgUH/8QAJBAAAgEDAwQDAQAAAAAAAAAAAQIDBAURAAYhMRITQWH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AqtDT2y26Yp6Cip2p6SmRIoo41CqqqMBQB7AAa50p/9k=" 
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/70 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-6">

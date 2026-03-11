@@ -20,6 +20,7 @@ export default function Footer() {
                   width={120}
                   height={120}
                   className="object-contain relative z-10 filter brightness-0 invert"
+                  priority
                 />
               </div>
             </Link>

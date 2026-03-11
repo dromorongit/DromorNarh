@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 import { Code, Globe, Smartphone, AppWindow, Palette, Video, Scissors, Layers } from 'lucide-react'
 
 const services = [
@@ -160,12 +161,12 @@ export default function ServicesPage() {
           <p className="text-gray-400 mb-6 max-w-xl mx-auto">
             Let's discuss your project and see how I can help bring your ideas to life.
           </p>
-          <a
+          <Link
             href="/contact"
             className="inline-block px-8 py-3 bg-seaBlue text-white rounded-lg font-semibold hover:bg-seaBlue/90 transition-colors"
           >
             Get in Touch
-          </a>
+          </Link>
         </motion.div>
       </div>
     </div>
