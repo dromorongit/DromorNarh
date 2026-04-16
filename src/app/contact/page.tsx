@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { Mail, Phone, MapPin, Send, MessageSquare, Clock, CheckCircle } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, MessageSquare, Clock, CheckCircle, Facebook, Instagram, Github, MessageCircle } from 'lucide-react'
 
 export default function ContactPage() {
   const [formState, setFormState] = useState({
@@ -251,22 +251,38 @@ export default function ContactPage() {
             >
               <h3 className="font-semibold mb-4">Social Links</h3>
               <div className="flex space-x-4">
-                {[
-                  { name: 'Facebook', href: 'https://www.facebook.com' },
-                  { name: 'Instagram', href: 'https://www.instagram.com/iamdhrone' },
-                  { name: 'GitHub', href: 'https://github.com/dromorongit' },
-                  { name: 'WhatsApp', href: 'https://wa.me/233538284952' }
-                ].map((social) => (
-                  <a
-                    key={social.name}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center hover:bg-seaBlue/20 hover:text-seaBlue transition-colors"
-                  >
-                    <span className="text-sm font-medium">{social.name[0]}</span>
-                  </a>
-                ))}
+                <a
+                  href="https://www.facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center hover:bg-seaBlue/20 hover:text-seaBlue transition-colors"
+                >
+                  <Facebook size={20} />
+                </a>
+                <a
+                  href="https://www.instagram.com/iamdhrone"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center hover:bg-purple/20 hover:text-purple transition-colors"
+                >
+                  <Instagram size={20} />
+                </a>
+                <a
+                  href="https://github.com/dromorongit"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center hover:bg-white/20 hover:text-white transition-colors"
+                >
+                  <Github size={20} />
+                </a>
+                <a
+                  href="https://wa.me/233538284952"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center hover:bg-green-500/20 hover:text-green-500 transition-colors"
+                >
+                  <MessageCircle size={20} />
+                </a>
               </div>
             </motion.div>
           </motion.div>
