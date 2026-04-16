@@ -63,13 +63,16 @@ export const projects: Project[] = [
     color: 'from-gold to-seaBlue',
     image: '/images/projects/dhrone-pos.jpg',
     technologies: ['Electron', 'React', 'TypeScript', 'SQLite', 'Node.js', 'Tailwind CSS'],
-    role: 'Lead Developer - Desktop Application',
+    role: 'Full Stack Developer',
     websiteUrl: '#',
     gallery: [
-      '/images/projects/pos-1.jpg',
-      '/images/projects/pos-2.jpg'
+      '/images/dhronetechpos1.png',
+      '/images/dhronetechpos2.png',
+      '/images/dhronetechpos3.png',
+      '/images/dhronetechpos4.png',
+      '/images/dhronetechpos5.png'
     ],
-    year: '2024',
+    year: '2026',
     client: 'Dhrone Tech Solutions'
   },
   {
