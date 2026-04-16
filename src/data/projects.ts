@@ -150,7 +150,12 @@ export const projects: Project[] = [
     technologies: ['Next.js', 'React', 'Tailwind CSS'],
     role: 'Full Stack Developer',
     websiteUrl: 'https://www.richtymluxe.org',
-    gallery: [],
+    gallery: [
+      '/images/rich1.png',
+      '/images/rich2.png',
+      '/images/rich3.png',
+      '/images/rich4.png'
+    ],
     year: '2026',
     client: 'Rich Tym Luxe'
   },
@@ -225,7 +230,13 @@ export const projects: Project[] = [
     technologies: ['HTML5', 'CSS3', 'JavaScript'],
     role: 'Full Stack Developer',
     websiteUrl: 'https://www.obo4raphael.com',
-    gallery: [],
+    gallery: [
+      '/images/obo1.png',
+      '/images/obo2.png',
+      '/images/obo3.png',
+      '/images/obo4.png',
+      '/images/obo5.png'
+    ],
     year: '2025',
     client: 'Obofour Raphael'
   }
