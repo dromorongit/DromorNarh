@@ -37,22 +37,6 @@ const videos = [
     duration: '1:15',
     views: '12K',
     thumbnail: '🛒'
-  },
-  {
-    id: 5,
-    title: 'Brand Documentary - Success Story',
-    category: 'commercials',
-    duration: '5:00',
-    views: '5K',
-    thumbnail: '📽️'
-  },
-  {
-    id: 6,
-    title: 'Product Launch Teaser',
-    category: 'commercials',
-    duration: '0:30',
-    views: '18K',
-    thumbnail: '🚀'
   }
 ]
 
