@@ -213,6 +213,21 @@ export const projects: Project[] = [
     gallery: [],
     year: '2025',
     client: 'Hair Elevation Studios'
+  },
+  {
+    slug: 'obofour-raphael',
+    title: 'Obofour Raphael',
+    description: 'A personal portfolio website for veteran musician Obofour Raphael featuring artist biography, music releases, upcoming events, photo gallery, and contact information. The design reflects his rich musical heritage and legacy.',
+    shortDescription: 'Musician portfolio website',
+    category: 'Personal Website',
+    color: 'from-yellow-600 to-orange-600',
+    image: '/images/projects/obofour-raphael.jpg',
+    technologies: ['HTML5', 'CSS3', 'JavaScript'],
+    role: 'Full Stack Developer',
+    websiteUrl: 'https://www.obo4raphael.com',
+    gallery: [],
+    year: '2025',
+    client: 'Obofour Raphael'
   }
 ]
 
