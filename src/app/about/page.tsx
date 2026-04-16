@@ -23,11 +23,13 @@ const skills = {
 }
 
 const timeline = [
-  { year: '2020', title: 'Started Journey', description: 'Began professional software development' },
-  { year: '2021', title: 'First Client Projects', description: 'Delivered first web development projects' },
-  { year: '2022', title: 'Expanded to Apps', description: 'Started building mobile and desktop applications' },
-  { year: '2023', title: 'Creative Studio', description: 'Launched video production services' },
-  { year: '2024', title: '50+ Projects', description: 'Completed over 50 successful projects' },
+  { year: '2020', title: 'Video Editing Beginnings', description: 'Started with basic video editing and slideshow production' },
+  { year: '2021', title: 'First Music Video', description: 'Shot first music video for BlaqMili - KaakaaMotobi Official Video' },
+  { year: '2022', title: 'Professional Video Production', description: 'Professional video directing/editing - Lipssy J music video and Netyark Mall marketing videos' },
+  { year: '2023', title: 'Web Development Start', description: 'Began developing demo websites (not production-ready)' },
+  { year: '2024', title: 'UI/UX Expert', description: 'Delivered 13+ video projects, many photoshoots, good at UI/UX web design' },
+  { year: '2025', title: 'First Live Web Projects', description: 'Developed first 3 full web projects that went live in production' },
+  { year: '2026', title: 'Multiple Projects', description: '20+ videos, 30+ photos, 11+ websites, 2+ desktop applications delivered' },
 ]
 
 export default function AboutPage() {
