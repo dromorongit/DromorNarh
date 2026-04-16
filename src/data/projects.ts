@@ -138,6 +138,66 @@ export const projects: Project[] = [
     ],
     year: '2026',
     client: 'Sweet Treets'
+  },
+  {
+    slug: 'rich-tym-luxe',
+    title: 'Rich Tym Luxe',
+    description: 'A premium luxury e-commerce platform offering high-end fashion, accessories, and lifestyle products. Features include elegant product showcases, secure payment processing, wishlist functionality, and a seamless shopping experience for discerning customers.',
+    shortDescription: 'Premium luxury e-commerce platform',
+    category: 'Business Website',
+    color: 'from-amber-500 to-yellow-500',
+    image: '/images/projects/rich-tym-luxe.jpg',
+    technologies: ['Next.js', 'React', 'Tailwind CSS'],
+    role: 'Full Stack Developer',
+    websiteUrl: 'https://www.richtymluxe.org',
+    gallery: [],
+    year: '2026',
+    client: 'Rich Tym Luxe'
+  },
+  {
+    slug: 'shop-auntie-araba',
+    title: 'Shop Auntie Araba',
+    description: 'An African-inspired e-commerce platform featuring authentic African clothing, fabrics, and cultural artifacts. The platform enables vendors to list products and offers customers a convenient way to browse and purchase traditional African wear and accessories.',
+    shortDescription: 'African fashion e-commerce platform',
+    category: 'Business Website',
+    color: 'from-orange-500 to-red-500',
+    image: '/images/projects/shop-auntie-araba.jpg',
+    technologies: ['Next.js', 'React', 'Tailwind CSS'],
+    role: 'Full Stack Developer',
+    websiteUrl: 'https://www.shopauntiearaba.com',
+    gallery: [],
+    year: '2026',
+    client: 'Shop Auntie Araba'
+  },
+  {
+    slug: 'cynkare',
+    title: 'Cynkare',
+    description: 'A professional business website for Cynkare featuring service showcases, company information, contact forms, and team profiles. The design emphasizes professionalism and modern business aesthetics.',
+    shortDescription: 'Professional business website',
+    category: 'Business Website',
+    color: 'from-blue-500 to-cyan-500',
+    image: '/images/projects/cynkare.jpg',
+    technologies: ['Next.js', 'React', 'Tailwind CSS'],
+    role: 'Full Stack Developer',
+    websiteUrl: 'https://www.cynkare.com',
+    gallery: [],
+    year: '2026',
+    client: 'Cynkare'
+  },
+  {
+    slug: 'affordable-wigs-gh',
+    title: 'Affordable Wigs GH',
+    description: 'An e-commerce platform specializing in wigs, hair extensions, and beauty products for the Ghanaian market. Features product catalog, shopping cart, secure checkout, and order tracking.',
+    shortDescription: 'Wigs and beauty products e-commerce',
+    category: 'Business Website',
+    color: 'from-purple-500 to-pink-500',
+    image: '/images/projects/affordable-wigs-gh.jpg',
+    technologies: ['Next.js', 'React', 'Tailwind CSS'],
+    role: 'Full Stack Developer',
+    websiteUrl: 'https://www.affordablewigsgh.com',
+    gallery: [],
+    year: '2026',
+    client: 'Affordable Wigs GH'
   }
 ]
 
