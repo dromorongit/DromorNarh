@@ -198,6 +198,21 @@ export const projects: Project[] = [
     gallery: [],
     year: '2026',
     client: 'Affordable Wigs GH'
+  },
+  {
+    slug: 'hair-elevation-studios',
+    title: 'Hair Elevation Studios',
+    description: 'A comprehensive e-commerce platform for wigs, wig bundles, hair treatments, and session bookings. Features include product catalog, booking system for salon sessions, secure payment processing, and order management.',
+    shortDescription: 'Wigs and hair services e-commerce platform',
+    category: 'E-commerce Platform',
+    color: 'from-rose-500 to-pink-600',
+    image: '/images/projects/hair-elevation-studios.jpg',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'React'],
+    role: 'Full Stack Developer',
+    websiteUrl: 'https://www.hairelevationstudio.com',
+    gallery: [],
+    year: '2025',
+    client: 'Hair Elevation Studios'
   }
 ]
 
